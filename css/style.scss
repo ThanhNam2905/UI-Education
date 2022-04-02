@@ -58,3 +58,158 @@ html {
         border-radius: 0.3rem;
     }
 }
+
+
+
+
+// CSS Header
+.header {
+    position: sticky;
+    top: 0;
+    left: 0; right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 10%;
+    background-color: $light-white-color;
+    box-shadow: $box-shadow;
+
+    .logo {
+        @include titleText(2.8rem);
+        font-weight: 800;
+        margin-right: auto;
+
+        i {
+            color: $green-color;
+        }
+
+        span {
+            color: $black-color;
+        }
+    }
+
+    .navbar {
+        position: relative;
+
+        #close-btn i {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            z-index: 1000;
+            font-size: 3.5rem;
+            color: $black-color;
+            cursor: pointer;
+            display: none;
+
+            &:hover {
+                color: $green-color;
+                transform: rotate(180deg) scale(0.8);
+            }
+        }
+
+        a {
+            @include titleText(2.2rem);
+            font-weight: 600;
+            color: $black-color;
+            margin-right: 2rem;
+    
+            &:hover {
+                color: $green-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .icons div {
+        font-size: 2.5rem;
+        color: $black-color;
+        margin-left: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+            color: $green-color;
+        }
+
+        &#menu-btn {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+// Media queries: Responsive Design
+@media (max-width: 1200px) {
+    .header {
+        padding: 2.5rem 5%;
+    }
+}
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 56%;
+    }
+
+    .header {
+        padding: 2.5rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 53%;
+    }
+
+    .header {
+        .icons div#menu-btn {
+            display: inline-block;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: -104%;
+            width: 30rem;
+            height: 100vh;
+            background-color: $white-color;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+                transition: 0.8s ease;
+                right: 0;
+                box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+            }
+
+            #close-btn i {
+                display: block;
+            }
+            
+            a {
+                margin-bottom: 1.5rem;
+                font-size: 3rem;
+                
+                &:hover {
+                    background-color: #8ff5d793;
+                    display: block;
+                    padding: 0.2rem 3rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+}
