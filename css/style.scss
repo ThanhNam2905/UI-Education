@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.35s linear;
+}
+
+// Variables scss
+$green-color: #0eb582;
+$light-green-color: #e5faf5;
+$light-color: #777;
+$light-white-color: #eee;
+$black-color: #444;
+$white-color: #fff;
+$border: 0.16rem solid $green-color;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+
+// Mixin scss
+@mixin grid($value) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleText) {
+    font-size: $titleText;
+    text-transform: capitalize;
+    color: $black-color;
+}
+
+@mixin graphText($graphText) {
+    font-size: $graphText;
+    line-height: 1.9;
+    color: $light-color;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $green-color;
+        border-radius: 0.3rem;
+    }
+}
