@@ -59,7 +59,22 @@ html {
     }
 }
 
+.btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.9rem;
+    color: $green-color;
+    background-color: $light-green-color;
+    border: $border;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
 
+    &:hover {
+        background-color: $green-color;
+        color: $white-color;
+    }
+}
 
 
 // CSS Header
@@ -132,6 +147,132 @@ html {
 
         &#menu-btn {
             display: none;
+        }
+    }
+}
+
+// CSS Account Form
+.account-form {
+    position: fixed;
+    top: -105%;
+    left: 50%;
+    z-index: 10000;
+    width: 42rem;
+    padding: 4rem 3rem;
+    border-radius: 0.5rem;
+    transform: translateX(-50%);
+    background-color: $white-color;
+    transition: 0.7s ease-in;
+    
+    &.active {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.7s ease-in;
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.4);
+    }
+
+    #close-account-form {
+        position: absolute;
+        top: 1.5rem;right: 2rem;
+        z-index: 1000;
+        font-size: 2.7rem;
+        color: $black-color;
+        cursor: pointer;
+
+        &:hover {
+            color: $green-color;
+            transform: rotate(180deg) scale(0.9);
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        gap: 1rem;
+
+        button {
+            font-size: 1.6rem;
+
+            &.active {
+                background-color: $green-color;
+                color: $white-color;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    form {
+        padding: 3rem;
+        border: 0.12rem solid $green-color;
+        text-align: center;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        h3 {
+            @include titleText(3.2rem);
+            color: $green-color;
+            text-transform: capitalize;
+            font-weight: 800;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.7rem;
+            border: $border;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            gap: 0.6rem;
+
+            label {
+                font-size: 1.6rem;
+                color: $light-color;
+                cursor: pointer;
+
+                &:hover {
+                    color: $green-color;
+                }
+            }
+
+            a {
+                margin-left: auto;
+                font-size: 1.5rem;
+                color: $light-color;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $green-color;
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: $black-color;
+
+            span {
+                &:hover {
+                    color: $green-color;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

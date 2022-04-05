@@ -30,6 +30,23 @@ html::-webkit-scrollbar-thumb {
   border-radius: 0.3rem;
 }
 
+.btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.9rem;
+  color: #0eb582;
+  background-color: #e5faf5;
+  border: 0.16rem solid #0eb582;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background-color: #0eb582;
+  color: #fff;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -113,6 +130,146 @@ html::-webkit-scrollbar-thumb {
 
 .header .icons div#menu-btn {
   display: none;
+}
+
+.account-form {
+  position: fixed;
+  top: -105%;
+  left: 50%;
+  z-index: 10000;
+  width: 42rem;
+  padding: 4rem 3rem;
+  border-radius: 0.5rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  -webkit-transition: 0.7s ease-in;
+  transition: 0.7s ease-in;
+}
+
+.account-form.active {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.7s ease-in;
+  transition: 0.7s ease-in;
+  -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.4);
+}
+
+.account-form #close-account-form {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+  font-size: 2.7rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.account-form #close-account-form:hover {
+  color: #0eb582;
+  -webkit-transform: rotate(180deg) scale(0.9);
+          transform: rotate(180deg) scale(0.9);
+}
+
+.account-form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.account-form .buttons button {
+  font-size: 1.6rem;
+}
+
+.account-form .buttons button.active {
+  background-color: #0eb582;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.account-form form {
+  padding: 3rem;
+  border: 0.12rem solid #0eb582;
+  text-align: center;
+  display: none;
+}
+
+.account-form form.active {
+  display: block;
+}
+
+.account-form form h3 {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #0eb582;
+  text-transform: capitalize;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.account-form form .input-box {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  border: 0.16rem solid #0eb582;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.account-form form .remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  gap: 0.6rem;
+}
+
+.account-form form .remember label {
+  font-size: 1.6rem;
+  color: #777;
+  cursor: pointer;
+}
+
+.account-form form .remember label:hover {
+  color: #0eb582;
+}
+
+.account-form form .remember a {
+  margin-left: auto;
+  font-size: 1.5rem;
+  color: #777;
+}
+
+.account-form form .remember a:hover {
+  text-decoration: underline;
+  color: #0eb582;
+}
+
+.account-form form .btn {
+  width: 100%;
+}
+
+.account-form form p {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.account-form form p span:hover {
+  color: #0eb582;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {

@@ -36,7 +36,37 @@
         </div>
     </header>
 
-
+    <!-- Account Form section start -->
+    <div class="account-form">
+        <div id="close-account-form" title="Close" class="fa-solid fa-xmark"></div>
+        <div class="buttons">
+            <button class="btn login-btn active">Login</button>
+            <button class="btn register-btn">Register</button>
+        </div>
+        <!-- Form Login -->
+        <form action="" class="active login-form">
+            <h3>Login Form</h3>
+            <input type="email" name="email" id="email" class="input-box" placeholder="abc@gmail.com">
+            <input type="password" name="password" id="password" class="input-box" placeholder="*********">
+            <div class="remember">
+                <input type="checkbox" name="remember-me" id="remember-me">
+                <label for="remember-me">Remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <input type="submit" value="Login now" class="btn">
+        </form>
+        <!-- Form Register -->
+        <form action="" class="register-form">
+            <h3>Register</h3>
+            <input type="email" name="email" id="email" class="input-box" placeholder="abc@gmail.com">
+            <input type="password" name="password" id="password" class="input-box" placeholder="password">
+            <input type="password" name="password" id="password" class="input-box" placeholder="confirm password">
+            <input type="text" name="numberphone" id="numberphone" placeholder="phone" class="input-box">
+            <p>Do you already have an account? <span onclick="handlerLoginHere()">Login here</span></p>
+            <input type="submit" value="Register now" class="btn">
+        </form>
+    </div>
+    <!-- Account Form section end -->
 
 
     <!-- Custom main.js link script -->
