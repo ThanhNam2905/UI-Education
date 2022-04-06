@@ -76,6 +76,17 @@ html {
     }
 }
 
+.heading {
+    @include titleText(4rem);
+    margin: 3rem 0;
+    color: $black-color;
+    text-align: center;
+    font-style: italic;
+
+    span {
+        color: $green-color;
+    }
+}
 
 // CSS Header
 .header {
@@ -277,7 +288,163 @@ html {
     }
 }
 
+// CSS Home
+main.home {
+    padding: 0;
 
+    .home-slider {
+
+        .slide {
+            padding: 0 10%;
+            display: flex;
+            align-items: center;
+            min-height: 60rem;
+            background-size: cover !important;
+            background-position: center !important;
+
+            .content {
+                width: 50rem;
+
+                h3 {
+                    @include titleText(5.5rem);
+                    color: $white-color;
+                }
+
+                p {
+                    @include graphText(1.7rem);
+                    color: $light-white-color;
+                    margin: 1.5rem 0 2.5rem;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+}
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        background-color: $white-color;
+        opacity: 1;
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $green-color;
+    }
+}
+
+// CSS Subjects in page home.html
+.subjects {
+    padding: 3rem 10%;
+
+    .box-container {
+        @include grid(15rem);
+        gap: 1.5rem;
+
+        .box {
+            padding: 2rem 3rem;
+            border: $border;
+            background-color: $light-green-color;
+            text-align: center;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: $green-color;
+
+                h4 {
+                    color: $white-color;
+                }
+
+                p {
+                    color: $light-white-color;
+                }
+            }
+
+            img {
+                height: 11rem;
+                margin-bottom: 1rem;
+            }
+
+            h4 {
+                @include titleText(1.8rem);
+                color: $black-color;
+                text-transform: capitalize;
+            }
+            
+            p {
+                @include graphText(1.5rem);
+                color: $light-color;
+            }
+        }
+    }
+}
+
+// CSS Courses in page home.html
+.courses {
+    padding: 3rem 10%;
+
+    .courses-slider {
+
+        .slide {
+            background-color: $light-green-color;
+            text-align: center;
+            width: 30rem;
+            position: relative;
+            overflow: hidden;
+
+            &:hover .content {
+                bottom: 0;
+            }
+
+            .image {
+                padding: 2rem;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
+
+                h4 {
+                    @include titleText(2rem)
+                }
+            }
+
+            .content {
+                position: absolute;
+                bottom: -105%;
+                left: 0; right: 0;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 2rem;
+
+                &:hover {
+                    background-color: $green-color;
+
+                    .btn {
+                        background-color: $black-color;
+                    }
+                }
+
+                h3 {
+                    @include titleText(2.1rem);
+                    color: $white-color;
+                }
+
+                p {
+                    @include graphText(1.55rem);
+                    line-height: 1.6;
+                    color: $light-white-color;
+                    margin: 1rem 0;
+                }
+
+                .btn {
+                    display: inline-block;
+                    margin-top: 0.5rem;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
 
 // CSS Footer
 .footer {
@@ -522,11 +689,43 @@ html {
         }
     }
 
+    main.home .home-slider .slide {
+        .content {
+            h3 {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    .footer .box-container .box {
+        .follow-us {
+            font-size: 3.3rem;
+        }
+    }
 }
 
 @media (max-width: 450px) {
 
     html {
         font-size: 50%;
+    }
+    .heading {
+        font-size: 3rem;
+    }
+
+    .header {
+        padding: 2.5rem 2.5rem;
+    }
+
+    main.home .home-slider .slide {
+        .content {
+            h3 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .footer {
+        padding: 3rem 2.5rem;
     }
 }
