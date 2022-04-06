@@ -43,3 +43,46 @@ const handlerLoginHere = () => {
     loginBtn.classList.add('active');
     registerBtn.classList.remove('active');
 }
+
+
+// SwiperJS
+var swiper = new Swiper(".home-slider", {
+    loop: true,
+    grabCursor:true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
+
+var swiper = new Swiper(".courses-slider", {
+    loop: true,
+    grabCursor:true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    
+    breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+        },
+      },
+});

@@ -47,6 +47,20 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
 }
 
+.heading {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #444;
+  margin: 3rem 0;
+  color: #444;
+  text-align: center;
+  font-style: italic;
+}
+
+.heading span {
+  color: #0eb582;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -270,6 +284,178 @@ html::-webkit-scrollbar-thumb {
   color: #0eb582;
   text-decoration: underline;
   cursor: pointer;
+}
+
+main.home {
+  padding: 0;
+}
+
+main.home .home-slider .slide {
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60rem;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+main.home .home-slider .slide .content {
+  width: 50rem;
+}
+
+main.home .home-slider .slide .content h3 {
+  font-size: 5.5rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+
+main.home .home-slider .slide .content p {
+  font-size: 1.7rem;
+  line-height: 1.9;
+  color: #777;
+  color: #eee;
+  margin: 1.5rem 0 2.5rem;
+  line-height: 1.7;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #0eb582;
+}
+
+.subjects {
+  padding: 3rem 10%;
+}
+
+.subjects .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.subjects .box-container .box {
+  padding: 2rem 3rem;
+  border: 0.16rem solid #0eb582;
+  background-color: #e5faf5;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.subjects .box-container .box:hover {
+  background-color: #0eb582;
+}
+
+.subjects .box-container .box:hover h4 {
+  color: #fff;
+}
+
+.subjects .box-container .box:hover p {
+  color: #eee;
+}
+
+.subjects .box-container .box img {
+  height: 11rem;
+  margin-bottom: 1rem;
+}
+
+.subjects .box-container .box h4 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.subjects .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: #777;
+  color: #777;
+}
+
+.courses {
+  padding: 3rem 10%;
+}
+
+.courses .courses-slider .slide {
+  background-color: #e5faf5;
+  text-align: center;
+  width: 30rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.courses .courses-slider .slide:hover .content {
+  bottom: 0;
+}
+
+.courses .courses-slider .slide .image {
+  padding: 2rem;
+}
+
+.courses .courses-slider .slide .image img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.courses .courses-slider .slide .image h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
+.courses .courses-slider .slide .content {
+  position: absolute;
+  bottom: -105%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+
+.courses .courses-slider .slide .content:hover {
+  background-color: #0eb582;
+}
+
+.courses .courses-slider .slide .content:hover .btn {
+  background-color: #444;
+}
+
+.courses .courses-slider .slide .content h3 {
+  font-size: 2.1rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+
+.courses .courses-slider .slide .content p {
+  font-size: 1.55rem;
+  line-height: 1.9;
+  color: #777;
+  line-height: 1.6;
+  color: #eee;
+  margin: 1rem 0;
+}
+
+.courses .courses-slider .slide .content .btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
 }
 
 .footer {
@@ -543,11 +729,29 @@ html::-webkit-scrollbar-thumb {
     padding: 0.2rem 3rem;
     border-radius: 0.5rem;
   }
+  main.home .home-slider .slide .content h3 {
+    font-size: 3.5rem;
+  }
+  .footer .box-container .box .follow-us {
+    font-size: 3.3rem;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+  .header {
+    padding: 2.5rem 2.5rem;
+  }
+  main.home .home-slider .slide .content h3 {
+    font-size: 3rem;
+  }
+  .footer {
+    padding: 3rem 2.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
