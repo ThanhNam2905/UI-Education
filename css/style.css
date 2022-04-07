@@ -850,6 +850,152 @@ main.home .home-slider .slide .content p {
   margin-right: 0.7rem;
 }
 
+.contact {
+  padding: 4rem 10%;
+}
+
+.contact .box-container {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.contact .box-container .box {
+  padding: 2rem 3rem;
+  text-align: center;
+  border: 0.16rem solid #0eb582;
+  background-color: #e5faf5;
+  border-radius: 0.5rem;
+}
+
+.contact .box-container i {
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #0eb582;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.contact .box-container h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #444;
+  margin: 1rem 0;
+}
+
+.contact .box-container p {
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: #777;
+  color: #777;
+}
+
+.contact .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.contact .row .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.contact .row .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact .row form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  padding: 2.5rem;
+  border: 0.16rem solid #0eb582;
+  border-radius: 0.5rem;
+}
+
+.contact .row form h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #444;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact .row form .input-box, .contact .row form textarea {
+  width: 100%;
+  padding: 0.75rem 1.4rem;
+  background-color: #e5faf5;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #444;
+  border-radius: 0.5rem;
+}
+
+.contact .row form .input-box:focus, .contact .row form textarea:focus {
+  background-color: #0eb582;
+  color: #fff;
+}
+
+.contact .row form .input-box:focus::-webkit-input-placeholder, .contact .row form textarea:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.contact .row form .input-box:focus:-ms-input-placeholder, .contact .row form textarea:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact .row form .input-box:focus::-ms-input-placeholder, .contact .row form textarea:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact .row form .input-box:focus::placeholder, .contact .row form textarea:focus::placeholder {
+  color: #fff;
+}
+
+.contact .row form .input-box::-webkit-input-placeholder, .contact .row form textarea::-webkit-input-placeholder {
+  color: #444;
+}
+
+.contact .row form .input-box:-ms-input-placeholder, .contact .row form textarea:-ms-input-placeholder {
+  color: #444;
+}
+
+.contact .row form .input-box::-ms-input-placeholder, .contact .row form textarea::-ms-input-placeholder {
+  color: #444;
+}
+
+.contact .row form .input-box::placeholder, .contact .row form textarea::placeholder {
+  color: #444;
+}
+
+.contact .row form textarea {
+  height: 10rem;
+  resize: none;
+}
+
+.contact .row form .btn {
+  margin-top: 0rem;
+  font-size: 1.6rem;
+}
+
 .footer {
   margin-top: 4rem;
   background-color: #e5faf5;
@@ -1056,6 +1202,16 @@ main.home .home-slider .slide .content p {
   .header {
     padding: 2.5rem 5%;
   }
+  .contact .row .image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 35rem;
+            flex: 1 1 35rem;
+  }
+  .contact .row form {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 35rem;
+            flex: 1 1 35rem;
+  }
   .footer {
     padding: 3.5rem 6%;
   }
@@ -1072,6 +1228,9 @@ main.home .home-slider .slide .content p {
     padding: 3rem 5rem;
   }
   main .courses {
+    padding: 3rem 5rem;
+  }
+  .contact {
     padding: 3rem 5rem;
   }
   .footer {
@@ -1145,6 +1304,9 @@ main.home .home-slider .slide .content p {
   main .courses {
     padding: 2.5rem 3.5rem;
   }
+  .contact {
+    padding: 2.5rem 3.5rem;
+  }
   .footer {
     padding: 2.5rem 3.5rem;
   }
@@ -1173,6 +1335,9 @@ main.home .home-slider .slide .content p {
     padding: 3rem;
   }
   main .courses {
+    padding: 3rem;
+  }
+  .contact {
     padding: 3rem;
   }
   .footer {
