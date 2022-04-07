@@ -895,6 +895,69 @@ main.home {
         }
     }
 }
+.faq {
+    padding: 3rem 10%;
+
+    .accordion-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        gap: 2rem;
+
+        .accordion {
+            flex: 1 1 40rem;
+            border: $border;
+            border-radius: 0.5rem;
+
+            &.active {
+
+                .accordion-title {
+                    background-color: $green-color;
+    
+                    h3 {
+                        color: $white-color;
+                    }
+    
+                    i {
+                        color: $white-color;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .accordion-content {
+                    display: block;
+                }
+            }
+
+            .accordion-title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1.5rem;
+                padding: 1.2rem 1.7rem;
+                cursor: pointer;
+
+                h3 {
+                    @include titleText(1.8rem);
+                    color: $black-color;
+                }
+
+                i {
+                    font-size: 2rem;
+                    color: $green-color;
+                }
+            }
+
+            .accordion-content {
+                @include graphText(1.55rem);
+                color: $light-color;
+                padding: 1.5rem 2rem;
+                border-top: $border;
+                display: none;
+            }
+        }
+    }
+}
 
 
 // CSS Footer
@@ -1069,7 +1132,7 @@ main.home {
 // Media queries: Responsive Design
 @media (max-width: 1200px) {
     .header {
-        padding: 2.5rem 5%;
+        padding: 2.5rem 6%;
     }
 
     .contact {
@@ -1107,6 +1170,10 @@ main.home {
     }
 
     .contact {
+        padding: 3rem 5rem;
+    }
+
+    .faq {
         padding: 3rem 5rem;
     }
 
@@ -1191,6 +1258,10 @@ main.home {
         padding: 2.5rem 3.5rem;
     }
 
+    .faq {
+        padding: 2.5rem 3.5rem;
+    }
+
     .footer {
         padding: 2.5rem 3.5rem;
         .box-container .box {
@@ -1235,6 +1306,10 @@ main.home {
     }
 
     .contact {
+        padding: 3rem;
+    }
+
+    .faq {
         padding: 3rem;
     }
 
