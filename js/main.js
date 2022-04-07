@@ -45,16 +45,24 @@ const handlerLoginHere = () => {
 }
 
 // Load-More
-let loadMoreBtn = document.querySelector('.load-more');
-
-loadMoreBtn.onclick = () => {
-    const arrList = document.querySelectorAll(".courses .box-container .hide");
-    arrList.forEach(show => {
+const handlerLoadMore = () => {
+    document.querySelectorAll(".courses .box-container .hide").forEach(show => {
         show.style.display = 'block';
-    })
-    
+    });
     loadMoreBtn.style.display = 'none';
-}
+};
+
+// FAQ Accordion 
+let accordionArray = document.querySelectorAll('.faq .accordion-container .accordion');
+
+accordionArray.forEach(item => {
+  item.onclick = () => {
+    accordionArray.forEach(accorItem => {
+      accorItem.classList.remove('active');
+    });
+    item.classList.toggle('active');
+  };
+})
 
 
 // SwiperJS
