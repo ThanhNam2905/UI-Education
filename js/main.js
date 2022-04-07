@@ -44,13 +44,25 @@ const handlerLoginHere = () => {
     registerBtn.classList.remove('active');
 }
 
+// Load-More
+let loadMoreBtn = document.querySelector('.load-more');
+
+loadMoreBtn.onclick = () => {
+    const arrList = document.querySelectorAll(".courses .box-container .hide");
+    arrList.forEach(show => {
+        show.style.display = 'block';
+    })
+    
+    loadMoreBtn.style.display = 'none';
+}
+
 
 // SwiperJS
 var swiper = new Swiper(".home-slider", {
     loop: true,
     grabCursor:true,
     autoplay: {
-        delay: 3500,
+        delay: 3000,
         disableOnInteraction: false,
     },
     pagination: {
@@ -63,10 +75,9 @@ var swiper = new Swiper(".courses-slider", {
     loop: true,
     grabCursor:true,
     autoplay: {
-        delay: 3500,
+        delay: 3000,
         disableOnInteraction: false,
     },
-    
     breakpoints: {
         0: {
           slidesPerView: 1,
@@ -83,6 +94,54 @@ var swiper = new Swiper(".courses-slider", {
         1200: {
           slidesPerView: 4,
           spaceBetween: 15,
+        },
+      },
+});
+
+var swiper = new Swiper(".teachers .teachers-slider", {
+    loop: true,
+    grabCursor:true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    spaceBetween: 20,
+    breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+          },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+});
+
+var swiper = new Swiper(".review .review-slider", {
+    loop: true,
+    grabCursor:true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    spaceBetween: 20,
+    breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+          },
+        1200: {
+          slidesPerView: 4,
         },
       },
 });
