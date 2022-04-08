@@ -49,7 +49,7 @@ const handlerLoadMore = () => {
     document.querySelectorAll(".courses .box-container .hide").forEach(show => {
         show.style.display = 'block';
     });
-    loadMoreBtn.style.display = 'none';
+    document.querySelector('.load-more .btn').style.display = 'none';
 };
 
 // FAQ Accordion 
@@ -63,6 +63,18 @@ accordionArray.forEach(item => {
     item.classList.toggle('active');
   };
 })
+
+// Loading Page
+let loadingPage = document.querySelector('#loading-page');
+
+function loading() {
+  loadingPage.classList.add('active');
+}
+function FadeOut() {
+  setInterval(loading, 3000);
+}
+
+window.onload = FadeOut();
 
 
 // SwiperJS
@@ -110,7 +122,7 @@ var swiper = new Swiper(".teachers .teachers-slider", {
     loop: true,
     grabCursor:true,
     autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
     },
     spaceBetween: 20,
@@ -152,4 +164,31 @@ var swiper = new Swiper(".review .review-slider", {
           slidesPerView: 4,
         },
       },
+});
+
+var swiper = new Swiper(".logo-container .logo-slider", {
+  loop: true,
+  grabCursor:true,
+  autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+  },
+  spaceBetween: 20,
+  breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      450: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+          slidesPerView: 4,
+        },
+      1200: {
+        slidesPerView: 5,
+      },
+    },
 });

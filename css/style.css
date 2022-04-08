@@ -99,6 +99,33 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+#loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #eee;
+  width: 100%;
+  height: 100vh;
+}
+
+#loading-page.active {
+  left: 105%;
+}
+
+#loading-page img {
+  width: 40%;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -346,7 +373,7 @@ main.home .home-slider .slide .content {
 }
 
 main.home .home-slider .slide .content h3 {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   text-transform: capitalize;
   color: #444;
   color: #fff;
@@ -669,7 +696,7 @@ main.home .home-slider .slide .content p {
 }
 
 .teachers .teachers-slider .teachers-wrapper .slide .info h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   color: #444;
   color: #444;
@@ -1075,6 +1102,19 @@ main.home .home-slider .slide .content p {
   display: none;
 }
 
+.logo-container {
+  padding: 5rem 10%;
+}
+
+.logo-container .logo-slider {
+  text-align: center;
+}
+
+.logo-container .logo-slider .slide {
+  height: 12rem;
+  pointer-events: none;
+}
+
 .footer {
   margin-top: 4rem;
   background-color: #e5faf5;
@@ -1281,6 +1321,14 @@ main.home .home-slider .slide .content p {
   .header {
     padding: 2.5rem 6%;
   }
+  .subjects .box-container .box {
+    padding: 2rem;
+    height: 20rem;
+    margin-bottom: 0.5rem;
+  }
+  .subjects .box-container .box img {
+    height: 8rem;
+  }
   .contact .row .image {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 35rem;
@@ -1371,14 +1419,33 @@ main.home .home-slider .slide .content p {
     padding: 0.2rem 3rem;
     border-radius: 0.5rem;
   }
+  main.home .home-slider .slide {
+    padding: 2.5rem 3.5rem;
+  }
   main.home .home-slider .slide .content h3 {
     font-size: 3.5rem;
+  }
+  .subjects {
+    padding: 2.5rem 3.5rem;
+  }
+  .courses {
+    padding: 2.5rem 3.5rem;
   }
   .about {
     padding: 2.5rem 3.5rem;
   }
   .teachers {
     padding: 2.5rem 3.5rem;
+  }
+  .teachers .teachers-slider .teachers-wrapper .slide .info h3 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: #444;
+  }
+  .teachers .teachers-slider .teachers-wrapper .slide .info span {
+    font-size: 1.8rem;
+    line-height: 1.65;
+    color: #777;
   }
   .review {
     padding: 2.5rem 3.5rem;
